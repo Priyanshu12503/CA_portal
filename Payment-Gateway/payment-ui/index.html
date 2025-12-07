@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA services Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="payment-section">
+        <h1>Payment Details</h1>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter Name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter Email" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (WhatsApp enabled to access later)</label>
+          <div class="phone-input">
+            <div class="flag">
+              <img src="image.png" alt="IN" />
+              <span>+91</span>
+            </div>
+            <input type="tel" id="phone" placeholder="Enter Phone" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="coupon">Coupon Code</label>
+          <div class="coupon-container">
+            <input type="text" id="coupon" value="EARLYBIRD" />
+            <span class="clear-coupon"><i class="fas fa-times"></i></span>
+          </div>
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i> Offer applied successfully
+          </div>
+        </div>
+
+        <div class="price-card">
+          <div class="price-row">
+            <span>Original Price</span>
+            <span>₹9,999.00</span>
+          </div>
+          <div class="price-row">
+            <span>Discount</span>
+            <span class="negative-amount">-₹6,049.40</span>
+          </div>
+          <div class="price-row total-row">
+            <span>Total</span>
+            <span>₹3,949.60</span>
+          </div>
+        </div>
+
+        <button class="pay-button">
+          <i class="fas fa-lock"></i> Pay ₹3,950
+        </button>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-google-pay"></i>
+          <i class="fab fa-apple-pay"></i>
+        </div>
+        <div class="secure-text">
+          <i class="fas fa-shield-alt"></i> Secure payment - 100% safe checkout
+        </div>
+      </div>
+
+      <div class="course-section">
+        <h1 class="course-title">
+          All CA Services at one place on competititve prices
+        </h1>
+
+        <div class="course-banner">
+          <img
+            src="https://www.reed.com/learning/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ftfpjkpoqu48y%2F5X3ulE8nzl50MsEwBWaWNl%2Fcf89a7dafb73fd7646100a673ad3cb84%2FChartered_Accountant-_SMALL.jpg&w=3840&q=75"
+            alt="CA Image"
+          />
+          <div class="live-badge">LIVE</div>
+        </div>
+
+        <div class="course-description">
+          You're one step away from accessing professional CA services such as tax filing, GST, compliance, and financial guidance.
+        </div>
+
+        <div class="instructor-info">
+          <i class="fas fa-user-tie"></i> Experienced CA with 6+ years
+          in the industry
+        </div>
+
+        <div class="course-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-calendar-alt"></i>
+            <div>
+              <strong> Document review within </strong>
+              <span>24-72 months</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Expertise </strong>
+              <span>120+ CA-handled services</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>Size</strong>
+              <span>Limited clients</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-features">
+  <h3>Services included</h3>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Personalized CA Consultation</span>
+  </div>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Real-time GST & ITR Processing</span>
+  </div>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Access to All Filed Documents Anytime</span>
+  </div>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Complete Compliance & Tax Filing Management</span>
+  </div>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Additional Documentation & Form Support</span>
+  </div>
+
+  <div class="feature-item">
+    <span class="feature-check"><i class="fas fa-check"></i></span>
+    <span>Business & Tax Advisory Sessions</span>
+  </div>
+
+  <div class="show-more">
+    <span id="show-more-text">Show more</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
